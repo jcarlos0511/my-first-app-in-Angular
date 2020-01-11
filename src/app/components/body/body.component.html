@@ -1,0 +1,29 @@
+<div class="row">
+
+    <div class="col">
+        <h1>*ngIf</h1>
+        <p>Trabaja en base a expresiones que den resultados. Ejm. Un True or False.</p>
+        <hr>
+
+        <div *ngIf = "mostrar" class="card text-white bg-primary mb-3" style="width: 100%;">
+            <div class="card-body">
+                <h5 class="card-title">{{frase.autor}}</h5>
+                <p class="card-text">{{frase.mensaje}}</p>
+            </div>
+        </div>
+
+        <button (click)=" mostrar = !mostrar " class="btn btn-outline-primary btn-block">
+            Mostrar/Ocultar
+        </button>
+    </div>
+
+    <div class="col">
+        <h1>*ngFor</h1>
+        <p>Trabaja en base a arreglos.</p>
+        <hr>
+
+        <ul class="list-group text-center" >
+            <li *ngFor = "let personaje of personajes; let i = index" class="list-group-item">{{ i + 1  }}. {{ personaje }}</li>
+        </ul>
+    </div>
+</div>
